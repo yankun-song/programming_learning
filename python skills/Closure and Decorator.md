@@ -158,6 +158,24 @@ def works_for_all(func):
     return inner
 ```
 
+## Decorator with Parameters
+Sometimes, the decorator itself needs some parameters. 
+
+In this case, one more function that accepts the parameters is needed in the outer layer, to form a 3-level nested structure of functions.
+
+```
+def repeat_func(n):
+    def wrapper(func):
+        def inner():
+            print('before function run')
+            for i in range(n):
+                func()
+            print('after function run')
+        return inner
+    return wrapper
+
+```
+
 ## Chaining Decorators
 ```
 def star(func):
