@@ -63,5 +63,5 @@ so COALESCE(expression, 0) can realize the same result as above.
 ```SELECT name, year(created_at) AS year, month(created_at) AS month FROM courses```
 
 ### time difference
-date1 - date2
+date1 - date2:
 `DATEDIFF(date1, date2)`
