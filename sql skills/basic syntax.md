@@ -1,4 +1,11 @@
 # Insert
+```
+INSERT INTO courses(name, student_count, created_at, teacher_id)
+VALUES ('Flash Sale', 100, '2018-01-01', 5)
+```
+```
+INSERT INTO courses values(null,'Flash Sale',100,'2018-01-01',5);
+```
 
 # Delete
 ```
@@ -6,6 +13,11 @@ DELETE FROM courses WHERE name = 'Dynamic Programming'
 ```
 
 # Update
+```
+UPDATE courses
+SET student_count = 500
+WHERE name = 'Artificial Intelligence'
+```
 
 # Select
 
@@ -44,7 +56,12 @@ ORDER BY age
 
 so COALESCE(expression, 0) can realize the same result as above.
 
-## extract year/ month from datetime
+
+
+## Time
+### extract year/ month from datetime
 ```SELECT name, year(created_at) AS year, month(created_at) AS month FROM courses```
 
-##
+### time difference
+date1 - date2
+`DATEDIFF(date1, date2)`
